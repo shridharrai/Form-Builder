@@ -6,9 +6,16 @@ import { currentUser } from "@clerk/nextjs";
 
 class UserNotFoundErr extends Error {}
 
-export async function getFormStats() {
+async function getCurrentUser() {
   const user = await currentUser();
+
   if (!user) throw new UserNotFoundErr();
+
+  return user;
+}
+
+export async function getFormStats() {
+  const user = await getCurrentUser();
 
   const stats = await prisma.form.aggregate({
     where: {
@@ -34,11 +41,10 @@ export async function getFormStats() {
 }
 
 export async function createForm(data: formSchemaType) {
+  const user = await getCurrentUser();
+
   const validation = formSchema.safeParse(data);
   if (!validation.success) throw new Error("Form not valid");
-
-  const user = await currentUser();
-  if (!user) throw new UserNotFoundErr();
 
   const { name, description } = data;
   const form = await prisma.form.create({
@@ -51,4 +57,17 @@ export async function createForm(data: formSchemaType) {
   if (!form) throw new Error("Error while form creation");
 
   return form.id;
+}
+
+export async function getForms() {
+  const user = await getCurrentUser();
+
+  return await prisma.form.findMany({
+    where: {
+      userId: user.id,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 }
