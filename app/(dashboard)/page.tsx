@@ -1,4 +1,4 @@
-import CreateFormButton from "@/components/CreateFormButton";
+import CreateFormButton from "@/components/customButtons/CreateFormButton";
 import { FormCardSkeleton } from "@/components/dashboard/FormCardSkeleton";
 import { FormCards } from "@/components/dashboard/FormCards";
 import { StatsCards } from "@/components/dashboard/StatsCards";
