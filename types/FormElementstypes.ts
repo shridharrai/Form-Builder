@@ -6,7 +6,7 @@ export const enum ElementsType {
 
 export type ExtraAttributesType = Record<string, string | boolean>;
 
-type FormElementInstance = {
+export type FormElementInstance = {
   id: string;
   type: ElementsType;
   extraAttributes?: ExtraAttributesType;
@@ -19,11 +19,15 @@ export type FormElement = {
     icon: React.ElementType;
     label: string;
   };
-  designerComponent: React.FC;
+  designerComponent: React.FC<DesignerComponentProps>;
   formComponent: React.FC;
   propertiesComponent: React.FC;
 };
 
 export type FormElementsType = {
   [key in ElementsType]: FormElement;
+};
+
+export type DesignerComponentProps = {
+  elementInstance: FormElementInstance;
 };

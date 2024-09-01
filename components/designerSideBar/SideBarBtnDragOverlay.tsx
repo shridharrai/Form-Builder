@@ -1,4 +1,4 @@
-import { FormElement } from "@/types/FormElementstypes";
+import { FormElement } from "@/types/FormElementsTypes";
 import { Button } from "../ui/button";
 
 const SideBarBtnDragOverlay = ({

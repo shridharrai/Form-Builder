@@ -1,4 +1,4 @@
-import { FormElementsType } from "@/types/FormElementstypes";
+import { FormElementsType } from "@/types/FormElementsTypes";
 import { TextFieldFormElement } from "./TextFieldFormElement";
 
 export const FormElements: FormElementsType = {

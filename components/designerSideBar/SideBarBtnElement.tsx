@@ -1,4 +1,4 @@
-import { FormElement } from "@/types/FormElementstypes";
+import { FormElement } from "@/types/FormElementsTypes";
 import { useDraggable } from "@dnd-kit/core";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";

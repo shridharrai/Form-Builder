@@ -2,11 +2,13 @@ import {
   ElementsType,
   ExtraAttributesType,
   FormElement,
-} from "@/types/FormElementstypes";
+  FormElementInstance,
+} from "@/types/FormElementsTypes";
 import { MdTextFields } from "react-icons/md";
+import DesignerComponent from "./DesignerComponent";
 
 const type = ElementsType.TEXT_FIELD;
-const extraAttributes: ExtraAttributesType = {
+const extraAttributes = {
   label: "Text Field",
   helperText: "Helper Text",
   required: false,
@@ -24,7 +26,9 @@ export const TextFieldFormElement: FormElement = {
     icon: MdTextFields,
     label: "Text Field",
   },
-  designerComponent: () => <div>Designer Component</div>,
+  designerComponent: DesignerComponent,
   formComponent: () => <div>Form Component</div>,
   propertiesComponent: () => <div>Properties Component</div>,
 };
+
+export type CustomExtraAttributesType = typeof extraAttributes;
