@@ -1,7 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { FormElement } from "@/types/FormElementsTypes";
-import { Button } from "../ui/button";
 
-const SideBarBtnDragOverlay = ({
+const SidebarBtnDragOverlay = ({
   formElement,
 }: {
   formElement: FormElement;
@@ -19,4 +19,4 @@ const SideBarBtnDragOverlay = ({
   );
 };
 
-export default SideBarBtnDragOverlay;
+export default SidebarBtnDragOverlay;

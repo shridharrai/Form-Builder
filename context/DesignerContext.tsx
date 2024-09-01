@@ -27,6 +27,15 @@ export const DesignerContextProvider = ({
     setElements((prev) => prev.filter((element) => element.id !== id));
   };
 
+  const updateElement = (id: string, element: FormElementInstance) => {
+    setElements((prev) => {
+      const updatedElements = [...prev];
+      const index = updatedElements.findIndex((element) => element.id === id);
+      updatedElements[index] = element;
+      return updatedElements;
+    });
+  };
+
   return (
     <DesignerContext.Provider
       value={{
@@ -35,6 +44,7 @@ export const DesignerContextProvider = ({
         removeElement,
         selectedElement,
         setSelectedElement,
+        updateElement,
       }}
     >
       {children}

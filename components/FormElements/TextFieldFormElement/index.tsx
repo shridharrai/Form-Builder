@@ -6,6 +6,7 @@ import {
 } from "@/types/FormElementsTypes";
 import { MdTextFields } from "react-icons/md";
 import DesignerComponent from "./DesignerComponent";
+import PropertiesComponent from "./PropertiesComponent";
 
 const type = ElementsType.TEXT_FIELD;
 const extraAttributes = {
@@ -28,7 +29,7 @@ export const TextFieldFormElement: FormElement = {
   },
   designerComponent: DesignerComponent,
   formComponent: () => <div>Form Component</div>,
-  propertiesComponent: () => <div>Properties Component</div>,
+  propertiesComponent: PropertiesComponent,
 };
 
 export type CustomExtraAttributesType = typeof extraAttributes;

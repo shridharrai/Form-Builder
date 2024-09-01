@@ -21,7 +21,7 @@ export type FormElement = {
   };
   designerComponent: React.FC<DesignerComponentProps>;
   formComponent: React.FC;
-  propertiesComponent: React.FC;
+  propertiesComponent: React.FC<DesignerComponentProps>;
 };
 
 export type FormElementsType = {

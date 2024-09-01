@@ -13,7 +13,6 @@ import {
 } from "../ui/dialog";
 import { BsFileEarmarkPlus } from "react-icons/bs";
 import { useForm } from "react-hook-form";
-import { formSchema, formSchemaType } from "@/schemas/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
@@ -28,17 +27,18 @@ import { Textarea } from "../ui/textarea";
 import { ImSpinner2 } from "react-icons/im";
 import { toast } from "../ui/use-toast";
 import { createForm } from "@/actions/form";
+import { formSchema, FormSchemaType } from "@/schemas";
 
 const CreateFormButton = () => {
   const router = useRouter();
-  const form = useForm<formSchemaType>({
+  const form = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
     },
   });
 
-  const onSubmit = async (values: formSchemaType) => {
+  const onSubmit = async (values: FormSchemaType) => {
     try {
       const formId = await createForm(values);
       toast({

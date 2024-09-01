@@ -43,8 +43,6 @@ const DesignerElementWrapper = ({
 
   if (isDragging) return null;
 
-  console.log("Selected ", selectedElement);
-
   const DesignerElement = FormElements[element.type].designerComponent;
   return (
     <div
@@ -55,7 +53,10 @@ const DesignerElementWrapper = ({
     ring-inset hover:cursor-pointer"
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}
-      onClick={() => setSelectedElement(element)}
+      onClick={(e) => {
+        setSelectedElement(element);
+        e.stopPropagation();
+      }}
     >
       <div
         ref={topHalf.setNodeRef}

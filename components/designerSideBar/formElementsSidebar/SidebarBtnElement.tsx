@@ -1,9 +1,9 @@
 import { FormElement } from "@/types/FormElementsTypes";
 import { useDraggable } from "@dnd-kit/core";
-import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
-const SideBarBtnElement = ({ formElement }: { formElement: FormElement }) => {
+const SidebarBtnElement = ({ formElement }: { formElement: FormElement }) => {
   const { label, icon: Icon } = formElement.designerBtnElement;
   const { setNodeRef, listeners, attributes, isDragging } = useDraggable({
     id: `designer-btn-${formElement.type}`,
@@ -30,4 +30,4 @@ const SideBarBtnElement = ({ formElement }: { formElement: FormElement }) => {
   );
 };
 
-export default SideBarBtnElement;
+export default SidebarBtnElement;

@@ -7,4 +7,5 @@ export type DesignerContextType = {
   removeElement: (id: string) => void;
   selectedElement: FormElementInstance | null;
   setSelectedElement: Dispatch<SetStateAction<FormElementInstance | null>>;
+  updateElement: (id: string, element: FormElementInstance) => void;
 };
