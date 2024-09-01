@@ -7,6 +7,7 @@ import {
 import { MdTextFields } from "react-icons/md";
 import DesignerComponent from "./DesignerComponent";
 import PropertiesComponent from "./PropertiesComponent";
+import FormComponent from "./FormComponent";
 
 const type = ElementsType.TEXT_FIELD;
 const extraAttributes = {
@@ -28,7 +29,7 @@ export const TextFieldFormElement: FormElement = {
     label: "Text Field",
   },
   designerComponent: DesignerComponent,
-  formComponent: () => <div>Form Component</div>,
+  formComponent: FormComponent,
   propertiesComponent: PropertiesComponent,
 };
 

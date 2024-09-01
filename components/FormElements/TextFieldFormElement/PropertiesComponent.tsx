@@ -1,4 +1,3 @@
-import { DesignerComponentProps } from "@/types/FormElementsTypes";
 import React, { useEffect } from "react";
 import { CustomExtraAttributesType } from ".";
 import { useForm } from "react-hook-form";
@@ -16,8 +15,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { FormComponentProps } from "@/types/FormElementsTypes";
 
-const PropertiesComponent: React.FC<DesignerComponentProps> = ({
+const PropertiesComponent: React.FC<FormComponentProps> = ({
   elementInstance,
 }) => {
   const { label, helperText, required, placeholder } =

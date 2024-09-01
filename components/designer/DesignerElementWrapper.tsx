@@ -19,7 +19,7 @@ const DesignerElementWrapper = ({
   const topHalf = useDroppable({
     id: id + "-top",
     data: {
-      id,
+      elementId: id,
       type,
       isTopHalfDesignerElement: true,
     },
@@ -27,7 +27,7 @@ const DesignerElementWrapper = ({
   const bottomHalf = useDroppable({
     id: id + "-bottom",
     data: {
-      id,
+      elementId: id,
       type,
       isBottomHalfDesignerElement: true,
     },

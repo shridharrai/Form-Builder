@@ -19,15 +19,15 @@ export type FormElement = {
     icon: React.ElementType;
     label: string;
   };
-  designerComponent: React.FC<DesignerComponentProps>;
-  formComponent: React.FC;
-  propertiesComponent: React.FC<DesignerComponentProps>;
+  designerComponent: React.FC<FormComponentProps>;
+  formComponent: React.FC<FormComponentProps>;
+  propertiesComponent: React.FC<FormComponentProps>;
 };
 
 export type FormElementsType = {
   [key in ElementsType]: FormElement;
 };
 
-export type DesignerComponentProps = {
+export type FormComponentProps = {
   elementInstance: FormElementInstance;
 };

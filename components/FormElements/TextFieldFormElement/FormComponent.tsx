@@ -4,9 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { FormComponentProps } from "@/types/FormElementsTypes";
 
-const DesignerComponent: React.FC<FormComponentProps> = ({
-  elementInstance,
-}) => {
+const FormComponent: React.FC<FormComponentProps> = ({ elementInstance }) => {
   const { label, required, placeholder, helperText } =
     elementInstance.extraAttributes as CustomExtraAttributesType;
 
@@ -17,7 +15,7 @@ const DesignerComponent: React.FC<FormComponentProps> = ({
         {required && "*"}
       </Label>
 
-      <Input readOnly disabled placeholder={placeholder} />
+      <Input placeholder={placeholder} />
 
       {helperText && (
         <p className="text-muted-foreground text-[0.8rem]">{helperText}</p>
@@ -26,4 +24,4 @@ const DesignerComponent: React.FC<FormComponentProps> = ({
   );
 };
 
-export default DesignerComponent;
+export default FormComponent;
