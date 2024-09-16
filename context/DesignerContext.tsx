@@ -40,6 +40,7 @@ export const DesignerContextProvider = ({
     <DesignerContext.Provider
       value={{
         elements,
+        setElements,
         addElement,
         removeElement,
         selectedElement,

@@ -5,6 +5,7 @@ import { LuView } from "react-icons/lu";
 import { TbArrowBounce } from "react-icons/tb";
 
 interface StatsCard {
+  id: number;
   name: string;
   title: string;
   icon: JSX.Element;
@@ -15,6 +16,7 @@ interface StatsCard {
 
 export const statsCards: StatsCard[] = [
   {
+    id: 1,
     name: "visits",
     title: "Total visits",
     icon: React.createElement(LuView, { className: "text-blue-600" }),
@@ -23,6 +25,7 @@ export const statsCards: StatsCard[] = [
     isPercentageData: false,
   },
   {
+    id: 2,
     name: "submissions",
     title: "Total submissions",
     icon: React.createElement(FaWpforms, { className: "text-yellow-600" }),
@@ -31,6 +34,7 @@ export const statsCards: StatsCard[] = [
     isPercentageData: false,
   },
   {
+    id: 3,
     name: "submissionRate",
     title: "Submission rate",
     icon: React.createElement(HiCursorClick, { className: "text-green-600" }),
@@ -39,6 +43,7 @@ export const statsCards: StatsCard[] = [
     isPercentageData: true,
   },
   {
+    id: 4,
     name: "bounceRate",
     title: "Bounce rate",
     icon: React.createElement(TbArrowBounce, { className: "text-red-600" }),

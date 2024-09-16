@@ -1,5 +1,5 @@
 import { getFormStats } from "@/actions/form";
-import { StatsCards } from "./StatsCards";
+import { StatsCards } from "../statsCards";
 
 export const StatsWrapper = async () => {
   const stats = await getFormStats();

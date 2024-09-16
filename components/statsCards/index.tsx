@@ -19,6 +19,7 @@ export const StatsCards: React.FC<Props> = ({ data, loading }) => {
           : "";
         return (
           <StatsCard
+            key={card.id}
             title={card.title}
             icon={card.icon}
             helperText={card.helperText}

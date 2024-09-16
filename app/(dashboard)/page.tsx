@@ -1,7 +1,7 @@
+import { StatsCards } from "@/components/statsCards";
 import CreateFormButton from "@/components/customButtons/CreateFormButton";
 import { FormCardSkeleton } from "@/components/dashboard/FormCardSkeleton";
 import { FormCards } from "@/components/dashboard/FormCards";
-import { StatsCards } from "@/components/dashboard/StatsCards";
 import { StatsWrapper } from "@/components/dashboard/StatsWrapper";
 import { Separator } from "@/components/ui/separator";
 import { Suspense } from "react";
